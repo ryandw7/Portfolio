@@ -1,7 +1,5 @@
 
 
-
-
 //DISPLAY IDS
 const display = document.getElementById('display');
 const displayCurrent = document.getElementById('current');

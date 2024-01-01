@@ -11,17 +11,21 @@ html {
 }
 
 header {
-    position: relative;
+    text-align: left;
+    position: absolute;
     width: 100%;
     background-color: hsla(204, 100%, 50%, .5);
     height: 200px;
 }
 
 .nav {
+    top: 0px;
+    padding: 10px;
     width: 100%;
     position: fixed;
     z-index: 1;
     background-color: hsla(204, 100%, 50%, 1);
+    border-bottom: 2px solid black;
 }
 
 nav ul {
@@ -36,10 +40,12 @@ nav li {
 }
 
 header h1,
-h3 {
+header h3 {
+    left: 20%;
     display: block;
-    top: 60px;
+    top: 80px;
 }
+
 
 main {
     display: grid;
@@ -57,24 +63,32 @@ section {
 
 .about-me {
     background-color: hsla(204, 100%, 50%, 1);
+    position: relative;
+    top: 30px;
+    left: 20%;
     padding: 40px 20px;
-    width: 90%;
+    width: 40%;
+    height: auto;
     border-radius: 20px;
 }
 
 .projects {
-    width: 90%;
+    width: 50%;
     border-radius: 20px;
     background-color: hsla(204, 100%, 50%, .25);
     display: flex;
-    flex-direction: row;
+
     text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+    justify-content: flex-start;
     height: auto;
     padding: 20px 0px;
     margin-bottom: 30px;
 
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: auto;
 }
 
 .projects h2 {
@@ -86,16 +100,17 @@ section {
 }
 
 .projects article {
-    display: flexbox;
+    flex-shrink: 2;
+    display: block;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 200px;
+    width: max-content;
     height: auto;
     padding: 10px;
     margin: 10px;
     background-color: hsla(204, 100%, 50%, 1);
     border-radius: 10px;
-    overflow: hidden;
+    transition: all ease-in .3s;
 }
 
 .projects h3 {
@@ -108,7 +123,7 @@ section {
 
 }
 
-.projects h4  {
+.projects h4 {
     margin: 0px 5px 10px 5px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -117,7 +132,7 @@ section {
 
 .projects img {
     height: auto;
-    width: 100%;
+    width: 400px;
     border-radius: 15px;
 }
 
@@ -128,13 +143,41 @@ section {
     border-radius: 20px;
 }
 
-.certificates {
+.certificates-and-awards {
     background-color: hsla(204, 100%, 50%, 1);
     padding: 40px 20px;
     width: 90%;
+    height: auto;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+.certificates {
+    display: flexbox;
+    flex-direction: row;
+}
+
+.awards {
+    display: flexbox;
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+
+}
+
+.certificates-and-awards article {
+    width: 25%;
+    height: auto;
+    overflow: visible;
+    margin: 20px auto;
+    orientation: landscape;
+}
+
+.certificates-and-awards object {
+    orientation: r;
+}
 
 footer {
     width: 100%;
@@ -148,5 +191,5 @@ footer {
 
 .contact-info h2 {
     font-size: 2rem;
-margin-bottom: 30px
+    margin-bottom: 30px
 }

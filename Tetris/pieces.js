@@ -291,8 +291,3 @@ class Tpiece extends Piece {
 
     }
 }
-
-
-
-
-//this.parent.grid[y + this.positionY -1][xi + this.positionX] = 0;
