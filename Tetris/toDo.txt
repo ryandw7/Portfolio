@@ -1,0 +1,3 @@
+fix wall merge on rotation
+add faster down speed
+clean up and comment
