@@ -39,3 +39,4 @@ projects.addEventListener('click', () => {
     skillsContent.hidden = true;
     projectsContent.hidden = false;
 })
+

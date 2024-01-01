@@ -1,38 +1,112 @@
-#head {
-    background-color: aqua;
-    border-radius: 5px;
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    position: relative;
 }
 
-#sections {
-    display:flex;
+html {
+    text-align: center;
+    font-size: 20px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    background-color: hsla(204, 100%, 50%, .5);
+    height: 200px;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: hsla(204, 100%, 50%, 1);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    color: white;
+    display: inline;
+}
+
+header h1,
+h3 {
+    display: block;
+    top: 60px;
+}
+
+main {
+    display: grid;
+    /*top: 150px;*/
+    position: relative;
+    margin: 10px;
+}
+
+section {
+    display: flex;
     width: 80%;
-    margin-left: 0% auto;
-    #resume {
-        text-align: center;
-        display: inline-block;
-        width: fit-content;
-        height: 25px;
-        border: 5px solid black;
-    }
-    #awards-and-certificates {
-        text-align: center;
-        display: inline-block;
-        width: fit-content;
-        height: 25px;
-        border: 5px solid black;
-    }
-    #skills {
-        text-align: center;
-        display: inline-block;
-        width: fit-content;
-        height: 25px;
-        border: 5px solid black;
-    }
-    #projects {
-        text-align: center;
-        display: inline-block;
-        width: fit-content;
-        height: 25px;
-        border: 5px solid black;
-    }
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+
+}
+
+.projects h2 {
+    display: block;
+    width: 100%;
+    justify-self: center;
+
+
+}
+
+.projects article {
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    background-color: hsla(204, 100%, 50%, 1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projects h3 {
+    top: 0px;
+    margin: 5px 5px 0px 5px;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.projects h4  {
+    margin: 0px 5px 10px 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+}
+
+.projects img {
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
 }
