@@ -1,5 +1,5 @@
 //import
-import { ROWS, COLS } from "./constants.js";
+import { ROWS, COLS, gameOver} from "./constants.js";
 import { Line, Block, RightJ, LeftJ, RightS, LeftS, Tpiece } from "./pieces.js";
 
 
@@ -12,10 +12,11 @@ export class Board {
     this.ctx = ctx;
     this.grid = this.getEmptyBoard();
     this.pieceIsActive = false;
-    this.currentPiece = 'obj';
+    this.currentPiece = Object;
+    this.heldPiece = Object;
+    this.nextPiece = Object;
     this.gameIsActive = true;
     this._score = 0;
-    this._scoreMultiplier = 1;
     this._level = 1;
     this._linesCleared = 0;
     this._levelTally = 0;
@@ -25,11 +26,14 @@ export class Board {
 
   //Updates the visuals to represent changes made to the grid, use after every piece move
   correctChanges() {
+    document.getElementById("score").textContent = this._score;
+    document.getElementById("level").textContent = this._level;
+    document.getElementById("lines").textContent = this._linesCleared;
     for (let y = 0; y < this.grid.length; y++) {
       for (let x = 0; x < this.grid[y].length; x++) {
         if (this.grid[y][x] > 0) {
-          switch(this.grid[y][x]){
-            
+          switch (this.grid[y][x]) {
+
             case 1: this.ctx.fillStyle = 'yellow'
               break;
             case 2: this.ctx.fillStyle = 'lightblue'
@@ -42,7 +46,7 @@ export class Board {
               break;
             case 6: this.ctx.fillStyle = 'green'
               break;
-              case 7: this.ctx.fillStyle = 'purple'
+            case 7: this.ctx.fillStyle = 'purple'
               break;
           }
           this.ctx.fillRect(x, y, 1, 1);
@@ -68,7 +72,7 @@ export class Board {
     let piece = 'obj';
     let randomNum = Math.floor(Math.random() * 7);
     console.log(randomNum);
-    switch (randomNum){
+    switch (randomNum) {
       case 0:
         piece = new Block(this.ctx, this);
         break;
@@ -97,34 +101,46 @@ export class Board {
   async checkBoard() {
     for (let i = 1; i < 500; i++) {
       setTimeout(() => {
-        document.getElementById("score").textContent = this._score;
-        document.getElementById("level").textContent = this._level;
-        document.getElementById("lines").textContent = this._linesCleared;
-        console.log(i)
-        if (this.pieceIsActive === false){
+        if (this.pieceIsActive === false) {
           this._score += 10;
-          console.log('new piece');
           this.clearLines();
-          this.newPiece();
-          this.pieceIsActive = true;
-          this.currentPiece.move();
+          let lossCheckTally = [];
+          for (let i = 0; i < this.grid[0].length; i++) {
+            if (this.grid[0][i] === 0) {
+              lossCheckTally.push(true);
+            } else {
+              lossCheckTally.push(false)
+            }
+          }
+          let lossCheck = lossCheckTally.every(Boolean);
+          if (lossCheck) {
+            this.newPiece();
+            this.pieceIsActive = true;
+            this.currentPiece.move();
+          } else {
+            gameOver.hidden = false;
+            return this._score;
+          }
+
+
+
         }
       }, i * 1000)
     }
   }
 
-  clearLines(){
-    console.log('checking rows')
-    for(let row = 0; row < this.grid.length; row++){
-      if(this.grid[row].every(Boolean)){
+  clearLines() {
+    let rowMultiplier = 1;
+    for (let row = 0; row < this.grid.length; row++) {
+      if (this.grid[row].every(Boolean)) {
         this._linesCleared++;
         this._levelTally++;
-        this._score += (1000 * this._scoreMultiplier);
-        //this.grid[row] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        this._score += (1000 * rowMultiplier);
+        rowMultiplier++;
         this.grid.splice(row, 1);
         this.grid.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         console.log(this.grid);
-        if(this._levelTally >= 4){
+        if (this._levelTally >= 4) {
           this._level++;
           this._scoreMultiplier += .2;
           this.speedMultiplier += .5;
