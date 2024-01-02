@@ -1,5 +1,5 @@
 //import
-import { ROWS, COLS, gameOver} from "./constants.js";
+import { ROWS, COLS, gameOver } from "./constants.js";
 import { Line, Block, RightJ, LeftJ, RightS, LeftS, Tpiece } from "./pieces.js";
 
 
@@ -135,14 +135,13 @@ export class Board {
       if (this.grid[row].every(Boolean)) {
         this._linesCleared++;
         this._levelTally++;
-        this._score += (1000 * rowMultiplier);
+        this._score += (100 * rowMultiplier);
         rowMultiplier++;
         this.grid.splice(row, 1);
         this.grid.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         console.log(this.grid);
         if (this._levelTally >= 4) {
           this._level++;
-          this._scoreMultiplier += .2;
           this.speedMultiplier += .5;
           this._levelTally -= 4;
         }
