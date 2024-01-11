@@ -99,7 +99,7 @@ export class Board {
   }
 
   async checkBoard() {
-    for (let i = 1; i < 500; i++) {
+   for(let i = 1; i < 1000; i++) {
       setTimeout(() => {
         if (this.pieceIsActive === false) {
           this._score += 10;
@@ -125,7 +125,7 @@ export class Board {
 
 
         }
-      }, i * 1000)
+      },i * 1000)
     }
   }
 

@@ -8,6 +8,8 @@
 html {
     text-align: center;
     font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
 }
 
 header {
@@ -16,6 +18,7 @@ header {
     width: 100%;
     background-color: hsla(204, 100%, 50%, .5);
     height: 200px;
+    
 }
 
 .nav {
@@ -41,9 +44,10 @@ nav li {
 
 header h1,
 header h3 {
-    left: 20%;
+    left: 10%;
     display: block;
-    top: 80px;
+    top: 200px;
+    color: hsla(204, 100%, 50%, 1);
 }
 
 
@@ -61,11 +65,15 @@ section {
     flex-direction: column;
 }
 
+section p {
+    color: black;
+    background-color: ;
+}
 .about-me {
     background-color: hsla(204, 100%, 50%, 1);
     position: relative;
     top: 30px;
-    left: 20%;
+    left: 10%;
     padding: 40px 20px;
     width: 40%;
     height: auto;
@@ -73,22 +81,18 @@ section {
 }
 
 .projects {
-    width: 50%;
+    margin-top: 80px;
+    width:80%;
     border-radius: 20px;
     background-color: hsla(204, 100%, 50%, .25);
-    display: flex;
-
     text-align: center;
-
-    justify-content: flex-start;
+    justify-content: space-around;
     height: auto;
     padding: 20px 0px;
     margin-bottom: 30px;
-
+    flex-wrap: wrap;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
-    overflow-x: auto;
 }
 
 .projects h2 {
@@ -104,7 +108,7 @@ section {
     display: block;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: max-content;
+    width: 40%;
     height: auto;
     padding: 10px;
     margin: 10px;
@@ -123,16 +127,17 @@ section {
 
 }
 
-.projects h4 {
+.projects p {
     margin: 0px 5px 10px 5px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: white;
+    padding: 5px;
 }
 
 .projects img {
     height: auto;
-    width: 400px;
+    width: 200px;
     border-radius: 15px;
 }
 
@@ -141,6 +146,21 @@ section {
     padding: 40px 20px;
     width: 90%;
     border-radius: 20px;
+}
+
+#resume  {
+    position: relative;
+    left: 30%;
+    width: 40%;
+    height: 800px;
+    padding: 20px;
+    
+}
+
+#resume object {
+width: 100%;
+height: 100%;
+border-radius: 10px;
 }
 
 .certificates-and-awards {
@@ -164,19 +184,18 @@ section {
     flex-direction: row;
     width: 90%;
     flex-wrap: wrap;
-
+    justify-content: space-around;
 }
 
 .certificates-and-awards article {
-    width: 25%;
+    width: 400px;
     height: auto;
-    overflow: visible;
     margin: 20px auto;
-    orientation: landscape;
+    margin: 5px;
 }
 
-.certificates-and-awards object {
-    orientation: r;
+.awards img {
+width: 100%;
 }
 
 footer {

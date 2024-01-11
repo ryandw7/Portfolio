@@ -1,7 +1,7 @@
 import { Line, Block, RightJ, LeftJ, RightS, LeftS, Tpiece, Piece } from "./pieces.js";
 import { COLS, ROWS, BLOCK_SIZE, gameOver } from "./constants.js";
 import { Board } from "./board.js";
-
+let canPressPlay = true;
 const button = document.querySelector("button");
 
 
@@ -17,9 +17,11 @@ gameOver.hidden = true;
 ctx.scale(BLOCK_SIZE, BLOCK_SIZE);
 ctx.fillStyle = 'blue';
 async function play(ctx) {
+  if(canPressPlay){
+  canPressPlay = false;
   let board = new Board(ctx);
-  
   board.checkBoard();
+  }
 }
 
 
