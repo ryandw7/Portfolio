@@ -10,7 +10,7 @@ class Piece {
         this.canMoveRight = true;
         this.canMoveLeft = true;
         this.canRotate = true;
-        this.pieceSpeed = 2;
+        this.pieceSpeed = 1;
         this.isActive = true;
     }
     //Fill parent board with matrix position
