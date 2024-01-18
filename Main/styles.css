@@ -221,42 +221,18 @@ main {
 }
 
 .projects article {
-    flex-shrink: 3;
-    display: flexbox;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: auto;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: all ease-in .3s;
+    border-radius: 30px;
+    width: 400px;
+    height: 400px;
 }
 
-.projects h3 {
-    top: 0px;
-    margin: 5px 5px 0px 5px;
-    background-color: black;
-    color: white;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-
+.project-article-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    visibility: hidden;
+    border-radius: 20px;
 }
-
-.projects p {
-    margin: 0px 5px 10px 5px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: white;
-    padding: 5px;
-}
-
-.projects img {
-    height: auto;
-    width: 50%;
-    min-width: 50px;
-    border-radius: 15px;
-}
-
 .experience {
     background-color: #5F548F;
 }
@@ -325,4 +301,9 @@ footer {
 .contact-info h2 {
     font-size: 2rem;
     margin-bottom: 30px
+}
+
+#tetris {
+    background-image: url("tetrisIMG.png");
+    background-size: cover;
 }
