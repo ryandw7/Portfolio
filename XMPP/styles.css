@@ -1,0 +1,437 @@
+/* COLORS
+hsl(277, 100%, 50%) Dark Purple
+hsl(277, 100%, 70%) Light Purple
+hsl(226, 100%, 50%) Dark Blue
+hsl(226, 100%, 70%) Light Blue
+
+New Palette 
+#9C87C9 grey lavender
+#898396 grey
+#A177FC lavender
+#534A66 Dark grey purple
+#140633 Dark Dark Blue
+*/
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+@media only screen and (min-width: 300px) {
+
+    h1 span {
+        font-size: 40px;
+        color: white;
+    }
+
+    header nav {
+        font-size: 10px;
+        width: 100%;
+        left: 0%;
+        position: relative;
+        display: block;
+        float: none;
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    header nav h3 {
+        padding: 10px;
+        margin: 10px;
+        width: 90%;
+        color: aliceblue;
+        border-radius: 5px;
+    }
+
+ 
+  
+    header #nav-list li,
+    header #doc-list li {
+        width: 40%;
+        left: 0%;
+        position: relative;
+        margin: 5px 5px;
+        display: inline-block;
+        height: fit-content;
+        text-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main section {
+        font-size: 15px;
+        width: 80%;
+    }
+
+    main section table {
+        font-size: 10px;
+        width: 80%;
+    }
+
+    .gg-crown {
+        bottom: 10px;
+        left: 65%;
+     }
+     
+     
+}
+
+
+@media only screen and (min-width: 420px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main section {
+        font-size: 15px;
+        width: 70%;
+    }
+
+    main section table {
+        font-size: 10px;
+        width: 70%
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    h1 span {
+        font-size: 60px;
+        color: white;
+    }
+
+    header h1 {
+        font-size: 40px;
+        
+    }
+
+    main section {
+        font-size: 20px;
+        width: 60%;
+
+    }
+
+    main section table {
+        font-size: 15px;
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    h1 span {
+        font-size: 81px;
+        color: white;
+        
+    }
+
+    header nav {
+        font-size: 25px;
+        width: 20%;
+        left: 75%;
+        position: relative;
+        display: block;
+        float: left;
+        
+    }
+
+    header nav h3 {
+        margin: 10px;
+        width: 90%;
+        border: 0px;
+    }
+  
+    header #nav-list li,
+    header #doc-list li {
+        width: 80%;
+        margin: 30px;
+        position: relative;
+        display: block;
+        right: 7%;
+    }
+   
+    header h1 {
+        font-size: 60px;
+    }
+
+    main section {
+        font-size: 25px;
+       width: 40%;
+    }
+
+    main section table {
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .gg-crown {
+        bottom: 17px;
+        left: 75%;
+     }
+     
+     
+}
+
+@media only screen and (min-width: 1900px) {
+    header h1 {
+        font-size: 60px;
+        
+    }
+
+    main section {
+        font-size: 30px;
+        width: 35%;
+
+    }
+
+    main section table {
+        font-size: 25px;
+        width: 35%;
+    }
+}
+
+h1 {
+    border-top: 30px solid black;
+    position: relative;
+    padding: 20px;
+    background-color: #A177FC;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    text-shadow: black;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+
+nav {
+    flex-shrink: 1;
+    top: 10px;
+    width: 20%;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+    max-height: max-content;
+    z-index: 1;
+}
+
+nav h3 {
+    text-align: center;
+    background-color: #898396;
+    border-bottom: 3px solid black;
+}
+
+nav h3:hover {
+    cursor: pointer;
+}
+
+nav h3 span {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    left: 100%;
+}
+
+nav li {
+    right: 7%;
+    font-size: 80%;
+    margin: 10px auto;
+    position: relative;
+    background-color: #A177FC;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav:hover {
+    color: white;
+    background-color: #BEB6D1;
+    cursor: pointer;
+}
+
+.nav:active {
+    background-color: gray;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav span {
+    font-weight: bolder;
+    text-decoration: underline;
+    -webkit-user-select:text;
+    /* Safari */
+    -ms-user-select: text;
+    /* IE 10 and IE 11 */
+    user-select: text;
+    /* Standard syntax */
+}
+
+#doc-list.is-dropped {
+    transition:all 2s ease-in;
+}
+.doc {
+    background-color: hsl(0, 0%, 87%);
+    color: black;
+    list-style-type: none;
+}
+
+section {
+    display: block;
+    position: relative;
+    width: 35%;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 30px auto;
+    margin-bottom: 75px;
+    background-color: #BEB6D1;
+}
+
+section h2 {
+    text-align: center;
+    color: #A177FC;
+    font-weight: 700;
+    padding: 10px;margin: 10px;
+    border-radius: 10px;
+
+}
+
+#raffle-winner {
+    color: hsl(277, 100%, 50%);
+}
+
+#heartland-incentive .ended, #rochester-incentive .ended{
+    color: red;
+    text-decoration: none;
+}
+section h3 {
+    text-align: center;
+    font-size: 80%;
+    color: hsl(0, 0%, 35%);
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+button {
+    font-size: 60%;
+    box-sizing: border-box;
+    width: 33%;
+    left: 33%;
+    position: relative;
+    text-align: center;
+    justify-self: center;
+    color: white;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: hsl(277, 100%, 50%);
+    border-radius: 10px;
+    border: 0px;
+}
+
+button:hover {
+    background-color: hsl(277, 100%, 70%);
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+section h4 {
+    font-size: 70%;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #A177FC;
+   /* border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black; */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+}
+
+section p {
+    font-size: 60%;
+    background-color: white;
+    /* border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black; */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+}
+
+
+#th1 {
+    border-top-left-radius: 15px;
+}
+
+#th3 {
+    border-top-right-radius: 15px;
+}
+
+tr,
+td,
+th {
+    padding: 10px;
+}
+
+tr {
+    color: hsl(277, 100%, 50%);
+    background-color: white;
+    font-size: 80%;
+}
+
+th {
+    background-color: #A177FC;
+    color: white;
+    font-weight: 700;
+}
+
+td {
+    max-height: 29.6px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 80px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.gg-crown {
+   display: inline-block;
+   margin: 0px;
+   
+   
+}
+
+.raffle {
+    background-color: black;
+}
+
+.winners {
+    color: hsl(277, 100%, 50%);
+}
