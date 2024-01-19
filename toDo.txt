@@ -1,0 +1,10 @@
+X fix cert
+fix projects
+add more about me info (make header more presentable)
+determine resume situation
+add nav hrefs
+change fonts
+add life to buttons
+
+
+projects = tetris, calc, movie finder, incentive
