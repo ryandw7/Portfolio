@@ -123,6 +123,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 h3 {
@@ -222,8 +223,10 @@ main {
 
 .projects article {
     border-radius: 30px;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
+    margin: 20px;
+    flex-shrink: 1;
 }
 
 .project-article-text {
@@ -233,6 +236,20 @@ main {
     visibility: hidden;
     border-radius: 29px;
 }
+
+.projects p {
+    margin: 20px;
+}
+
+.projects a {
+    display: block;
+background-color: #614CC2;
+color: white;
+padding: 20px;
+border-radius: 10px;
+margin: 20px;
+}
+
 .experience {
     display: flex;
     flex-direction: column;
@@ -248,18 +265,19 @@ main {
     text-align: left;
     width: 50%;
     line-height: 30px;
-    background-color: #4C495C;
+    background-color: white;
     padding: 40px;
     border-radius: 5px;
 }
 
 .experience li {
+    width: 80%;
     margin-bottom: 20px;
     color: #2F2D38;
     background-color: white;
     padding: 10px;
-    border-radius: 10px;
     list-style-type: none;
+    border-bottom: 3px solid #4C495C;
 }
 .experience span {
     color:#614CC2 ;
@@ -330,6 +348,12 @@ footer {
 
 #calculator {
     background-image: url("calculator.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#xmpp {
+    background-image: url("XMPP.png");
     background-size: cover;
     background-position: center;
 }
