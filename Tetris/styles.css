@@ -82,3 +82,51 @@ body {
   height: 200px;
   background-color: white;
 }
+
+
+.arrow-box {
+  display: flex;
+  border: 2px solid white;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-content:center ;
+}
+.left-arrow,
+.right-arrow,
+.up-arrow,
+.down-arrow {
+   justify-self: center;
+   align-self: center;
+   display: inline-block;
+   margin: 0px;
+   width: 15px;
+   height: 15px;
+   border-top: 2px solid white;
+   border-left: 2px solid white;
+   transform-origin: center;
+}
+.right-arrow {
+   transform: rotate(135deg);
+}
+.left-arrow {
+   transform: rotate(-45deg);
+}
+.up-arrow {
+   transform: rotate(45deg);
+}
+.down-arrow {
+   transform: rotate(-135deg);
+}
+.right-arrow::after,
+.left-arrow::after,
+.up-arrow::after,
+.down-arrow::after {
+   content: "";
+   display: block;
+   width: 2px;
+   height: 45px;
+   background-color: white;
+   transform: rotate(-45deg) translate(15px, 4px);
+}

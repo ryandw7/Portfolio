@@ -5,8 +5,8 @@
     height: 800px;
     margin: 20px auto;
     background-color: gray;
-    border: 5px solid black;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
 
     #display {
         font-family: 'Courier New', Courier, monospace;
@@ -22,14 +22,14 @@
         margin: 0% auto;
         margin-top: 40px;
         border-radius: 5px;
-        border: 5px solid black;
         justify-content: center;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
 
         #prev {
             font-family: 'Courier New', Courier, monospace;
             display: flex;
             font-size: larger;
-            
+
         }
 
         #current {
@@ -40,7 +40,7 @@
             margin-left: auto;
             justify-self: flex-end;
             align-self: flex-end;
-            
+
         }
 
         #waitingOperator {
@@ -52,7 +52,7 @@
             margin-left: auto;
             justify-self: flex-end;
             align-self: flex-end;
-            
+
         }
     }
 
@@ -80,7 +80,7 @@
                 width: 100px;
                 height: 100px;
                 background-color: white;
-                border: 5px solid black;
+                box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
                 border-radius: 10px;
 
                 #zero {
@@ -119,7 +119,7 @@
                 width: 70px;
                 height: 70px;
                 background-color: orange;
-                border: 5px solid black;
+                box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
                 border-radius: 10px;
 
 

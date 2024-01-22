@@ -248,7 +248,15 @@ nav li {
     display: inline;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
+nav a:hover {
+    color:#614CC2;
+    transition: 0.5s;
+}
 main {
     display: grid;
     position: relative;
