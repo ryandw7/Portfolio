@@ -1,0 +1,155 @@
+* {
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    opacity: 0.9;
+    text-align: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#logo {
+    position: fixed;
+    left: 10px;
+    height: 50px;
+}
+
+nav ul {
+    position: fixed;
+    right: 0px;
+    margin: 0px 10px;
+    max-height: fit-content;
+}
+
+ nav li {
+    top: 10px;
+    display: inline;
+    text-decoration: underline;
+    padding: 0px 10px;
+ }
+
+
+ header section {
+    flex-direction: column;
+    position: relative;
+    top: 60px;
+    display: flex;
+    background-image: url("teaShop-background.jpg");
+    width: 1200px;
+    height: 700px;
+    justify-content: center;
+ }
+
+ header h2 {
+    font-size: larger;
+    font-weight: bolder;
+ }
+
+ header h4, header h2 {
+    height: fit-content;
+    top: 0px;
+    padding: 5px;
+    margin: 0px;
+ }
+
+ main {
+    top: 30px;
+    text-align: center;
+    position: relative;
+    margin: 60px auto;
+    align-content: center;
+ }
+
+ main h2, main h4 {
+    width: 100%;
+    position: relative;
+    justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    max-height: fit-content;
+ }
+
+ main section {
+    flex-basis: 1000px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    margin: 0 auto;
+ }
+
+ main figure img {
+    max-height: 200px;
+    max-width: 300px;
+    flex-shrink: 1;
+ }
+
+ footer {
+   
+    text-align: center;
+    position: relative;
+ }
+ #locations {
+   margin: 0 auto;
+    position: relative;
+    background-image: url("teaShop-locations.jpg");
+    display: flex;
+    min-height: 500px;
+    max-width: 1200px;
+    flex-basis: 1200px;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;   
+    flex-wrap: wrap;            
+ }  
+
+ #locations h2 {
+    display: block;
+    height: fit-content;
+    margin: 0 auto;
+    background: none;
+    position:absolute;
+    align-self: flex-start;
+    top: 40px;
+    font-size: larger;
+ }
+ #locations div {
+    float: right;
+    flex-shrink: 2;
+    margin: 40px;
+    width: 300px;
+    opacity: 1;
+    position: relative;
+    height: fit-content;
+ }
+
+ #locations h3 {
+  font-weight: bold;
+ }
+ #locations p {
+    margin: 40px auto;
+ }
+
+ #contact {
+    height: 200px;
+ }
+
+ #contact h2 {
+    font-size: larger;
+    margin-bottom: 40px;
+ }
+
+ #copyright {
+    margin: 0px 0px;
+    text-align: left;
+    position: relative;
+    left: 0%;
+ }
