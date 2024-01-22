@@ -147,7 +147,6 @@ class Piece {
             for (let y = 0; y < this.matrix.length; y++) {
                 for (let x = 0; x < this.matrix[y].length; x++) {
                     if (this.matrix[y][x] > 0) {
-
                         if (this.positionY + 1 + y < this.parent.grid.length) {
                             if (this.parent.grid[this.positionY + y + 1][this.positionX + x] === 0) {
 

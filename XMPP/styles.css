@@ -63,6 +63,7 @@ New Palette
         display: inline-block;
         height: fit-content;
         text-wrap: wrap;
+        
     }
 
     header h1 {
@@ -230,6 +231,7 @@ nav h3 {
     text-align: center;
     background-color: #898396;
     border-bottom: 3px solid black;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 nav h3:hover {
@@ -255,6 +257,7 @@ nav li {
     text-align: center;
     color: white;
     text-decoration: none;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 
@@ -303,6 +306,7 @@ section {
     margin: 30px auto;
     margin-bottom: 75px;
     background-color: #BEB6D1;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 section h2 {
@@ -434,4 +438,8 @@ footer {
 
 .winners {
     color: hsl(277, 100%, 50%);
+}
+
+#nav li {
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }

@@ -13,9 +13,26 @@ COLORS
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 @media only screen and (min-width: 400px) {
+    .certificates-and-awards article {
+        width: 200px;
+    
+    }
     .projects article {
         width: 80%;
     }
@@ -26,10 +43,16 @@ COLORS
 
     .about-me {
         width: 80%;
+        
     }
 
     html {
         font-size: 12px;
+
+    }
+
+    .experience ul {
+        width: 80%;
     }
 }
 
@@ -61,11 +84,7 @@ COLORS
         flex-direction: column;
     }
 
-    .about-me {
-        width: 50%;
-
-    }
-
+   
 
     .projects article {
         width: 40%;
@@ -74,12 +93,22 @@ COLORS
     html {
         font-size: 16px;
     }
+
+    .experience ul {
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 900px) {
     html {
         font-size: 17px;
     }
+    
+    .certificates-and-awards article {
+        width: 300px;
+    
+    }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -92,19 +121,31 @@ COLORS
     html {
         font-size: 19px;
     }
+    .experience ul {
+        width: 60%;
+    }
+    .about-me {
+        width: 50%;
+
+    }
+
+    
 }
 
 @media only screen and (min-width: 1200px) {
     html {
         font-size: 20px;
     }
+    .certificates-and-awards article {
+        width: 400px;
+    }
 }
 
 html {
     text-align: center;
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Courier New', Courier, monospace;
     color: white;
+    font-weight: bold;
 }
 
 main section {
@@ -118,24 +159,26 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px black;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 p {
     font-size: 1rem;
+    text-shadow: 1px 1px 2px black;
 }
 
 header {
@@ -153,6 +196,7 @@ header {
 
 .title h1 {
     top: 30%;
+    text-shadow: 1px 1px 2px black;
 }
 
 .title {
@@ -170,11 +214,19 @@ header {
     background-color: #4C495C;
     padding: 20px;
     border-radius: 20px;
+    text-align: left;
+    text-indent: 50px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    margin-bottom: 40px;
 }
 
 .about-me span {
-   color: #614CC2;
+    color: #614CC2;
+    text-shadow: 1px 1px 2px white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
+
 .nav {
     top: 0px;
     padding: 10px;
@@ -227,6 +279,7 @@ main {
     height: 600px;
     margin: 20px;
     flex-shrink: 1;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .project-article-text {
@@ -242,12 +295,22 @@ main {
 }
 
 .projects a {
+    margin: 0px;
+    left: 25%;
+    width: 50%;
+    position: absolute;
+    top: 80%;
     display: block;
-background-color: #614CC2;
-color: white;
-padding: 20px;
-border-radius: 10px;
-margin: 20px;
+    background-color: #614CC2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.projects a:hover {
+    background-color: #4C495C;
+    transition: 1s;
 }
 
 .experience {
@@ -258,20 +321,20 @@ margin: 20px;
     min-height: 100vh;
     background-color: #5F548F;
     margin: 0 auto;
+    
 }
 
 .experience ul {
     gap: 40px;
     text-align: left;
-    width: 50%;
     line-height: 30px;
     background-color: white;
     padding: 40px;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .experience li {
-    width: 80%;
     margin-bottom: 20px;
     color: #2F2D38;
     background-color: white;
@@ -279,10 +342,12 @@ margin: 20px;
     list-style-type: none;
     border-bottom: 3px solid #4C495C;
 }
+
 .experience span {
-    color:#614CC2 ;
+    color: #614CC2;
     font-size: 1.5rem;
 }
+
 .certificates-and-awards {
     background-color: #4C495C;
     ;
@@ -307,10 +372,9 @@ margin: 20px;
 }
 
 .certificates-and-awards article {
-    width: 400px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
     height: auto;
-    margin: 20px auto;
-    margin: 5px;
+    margin: 10px;
 }
 
 .awards img {
@@ -354,6 +418,12 @@ footer {
 
 #xmpp {
     background-image: url("XMPP.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#tea-shop {
+    background-image: url("teaShop.png");
     background-size: cover;
     background-position: center;
 }
