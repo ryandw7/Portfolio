@@ -1,5 +1,4 @@
-import { populateGenreDropdown, getSelectedGenre, clearCurrentMovie, getRandomMovie, displayMovie } from "./helpers.js";
-const tmdbKey = 'dba7ebef6d1fba77d7a6f91cfa59cac8';
+import { populateGenreDropdown, getSelectedGenre, clearCurrentMovie, getRandomMovie, displayMovie } from "./helpers.js"; const tmdbKey = 'dba7ebef6d1fba77d7a6f91cfa59cac8';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
