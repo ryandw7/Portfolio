@@ -1,3 +1,5 @@
+import { aboutMeP1String, aboutMeP2String } from "./strings.js";
+
 const projectArticles = document.getElementsByClassName("project-article");
 const projectArticleText = document.getElementsByClassName("project-article-text");
 
@@ -21,33 +23,64 @@ function eventListeners() {
 }
 
 eventListeners();
-const aboutMe = document.getElementById("about-me-p");
+const aboutMeP1 = document.getElementById("about-me-p1");
+const aboutMeP2 = document.getElementById("about-me-p2");
 let loadCompleted = false;
-const title = document.getElementById('h1');
-function fadeIn(element){
+const title1 = document.getElementById('title1');
+const title2 = document.getElementById('title2');
+function fadeIn(element) {
     element.style.opacity = 0;
-    for(let i = 0; i < 20; i++){
-        element.style.opacity += .05;
-    }
-}
-
-
-function stringTyper(string, element) {
-    const char = string.split('');
-    const newArray = [];
-    for (let i = 0; i < string.length; i++) {
+    for (let i = 0; i < 200; i++) {
         setTimeout(() => {
-            newArray.pop()
-            newArray.push(char[i]);
-            newArray.push('|')
-            element.textContent = newArray.join("");
-        }, i * 50);
+            element.style.opacity = (i * 0.05);
+            console.log('bruh');
+        }, i * 50)
+
     }
-    
 }
+
+
+function stringTyper(string1, element1, string2, element2) {
+    const char1 = string1.split('');
+    const char2 = string1.split('');
+    const array1 = [];
+    const array2 = [];
+    for (let i = 0; i < (string1.length + string2.length); i++) {
+        setTimeout(() => {
+            array1.pop()
+            array1.push(char1[i]);
+            array1.push('|')
+            element1.textContent = array1.join("");
+        }, i * 25);
+        setTimeout(() => {
+            array2.pop()
+            array2.push(char2[i]);
+            array2.push('|')
+            element2.textContent = array2.join("");
+        }, (i + string1.length) * 25);
+
+    }
+}
+
+
+function typep1() {
+    stringTyper('test', aboutMe)
+}
+
+function typep2() {
+    stringTyper('bruh', aboutMe)
+}
+
+
+
+
 
 window.addEventListener("load", () => {
+    fadeIn(title1);
+    fadeIn(title2)
     console.log('test')
-    stringTyper("I'm Ryan, I'm 22 years old, and I am a passionate front-end developer with a year of hands-on experience in crafting engaging and responsive web experiences. My expertise lies in the trifecta of web technologies: JavaScript, HTML, and CSS.", aboutMe)
+    stringTyper(aboutMeP1String, aboutMeP1, aboutMeP2String, aboutMeP2);
 })
+
+
 

@@ -1,0 +1,2 @@
+export const aboutMeP1String = "I'm Ryan, I'm 22 years old, and I am a passionate front-end developer with a year of hands-on experience in crafting engaging and responsive web experiences. My expertise lies in the trifecta of web technologies: JavaScript, HTML, and CSS.";
+export const aboutMeP2String = "As a dynamic front-end developer, I currently leverage my skills in JavaScript and HTML to craft custom resources and incentives for my sales team.";
