@@ -13,11 +13,20 @@
    nav li {
       font-size: 10px;
    }
+   #logo {
+      height: 30px;
+      margin: 20px;
+   }
 }
 @media only screen and (min-width: 800px){
    nav li {font-size: 15px;  }
 }
 @media only screen and (min-width: 1100px){
+
+   #logo {
+      height: 50px;
+      margin: 10px;
+   }
    nav li {
       font-size: 18px;
    }
@@ -31,10 +40,9 @@ header {
 }
 
 #logo {
-   margin: 10px;
     position: fixed;
     left: 10px;
-    height: 50px;
+    
 }
 
 nav {
@@ -69,6 +77,7 @@ nav ul {
 
 
  header section {
+   background-position: center;
     flex-direction: column;
     position: relative;
     top: 60px;
