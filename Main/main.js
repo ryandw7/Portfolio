@@ -33,7 +33,7 @@ const title2 = document.getElementById('title2');
 
 function fadeIn(element) {
     element.style.opacity = 0;
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 21; i++) {
         setTimeout(() => {
             element.style.opacity = (i * 0.05);
             console.log('bruh');
