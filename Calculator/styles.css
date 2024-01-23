@@ -14,7 +14,7 @@
         flex-direction: column;
         display: flex;
         flex-wrap: nowrap;
-        min-width: 80%;
+        width: 80%;
         min-height: 100px;
         max-width: 80%;
         max-height: 100px;

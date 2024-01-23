@@ -18,7 +18,7 @@ padding: 40px;
 
 #genreForm select{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5vw;
     width: 400px;
 }
 
@@ -30,9 +30,10 @@ padding: 40px;
 }
 
 #movieInfo {
+    font-size: 1vw;
     display: flex;
     width:  65%;
-    margin:  32px auto;
+    margin:  10px auto;
     justify-content: center;
 }
 
@@ -62,7 +63,7 @@ img#moviePoster {
 }
 
 #movieTitle, #movieOverview {
-    padding:  32px;
+    padding:  10px;
 }
 
 #playBtn {
