@@ -222,6 +222,7 @@ header {
 }
 
 .about-me {
+    max-width: 80%;
     flex: 1;
     height: auto;
     margin: 10% auto;
@@ -242,19 +243,22 @@ header {
 }
 
 .nav {
+    display: flex;
     top: 0px;
-    padding: 10px;
+    padding: 10px 0px;
     width: 100%;
     position: fixed;
     z-index: 1;
     background-color: #2F2D38;
     border-bottom: 2px solid #614CC2;
+    justify-content: space-around;
 }
 
 nav ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 0px;
 }
 
 nav li {
@@ -265,7 +269,7 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 nav a:hover {
