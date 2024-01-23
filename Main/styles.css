@@ -10,6 +10,7 @@ COLORS
 
 
 * {
+    
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -32,8 +33,8 @@ COLORS
 @media only screen and (min-width: 300px) {
 
     .projects article {
-        width: 200px;
-        height: 200px;
+        width: 270px;
+        height: 270px;
     }
 
     html {
@@ -265,8 +266,6 @@ header {
 }
 
 .about-me span {
-    color: #614CC2;
-    text-shadow: 1px 1px 2px white;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -338,7 +337,11 @@ nav a:hover {
     background-color: rgba(0, 0, 0, .7);
     visibility: hidden;
     border-radius: 29px;
-    padding: 0px;
+    padding: 5px;
+}
+
+.project-article-text h5 {
+border-bottom: 3px solid white;
 }
 
 .projects img {
@@ -359,7 +362,7 @@ nav a:hover {
     display: block;
     background-color: #614CC2;
     color: white;
-    padding: 20px;
+    padding: 2px 20px;
     border-radius: 10px;
     text-align: center;
 }
