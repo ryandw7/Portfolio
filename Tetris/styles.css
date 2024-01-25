@@ -46,13 +46,19 @@ body {
 
  
   .grid {
+    position: relative;
+    top: 20px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    height: 100%;
+    margin: 30px;
   }
 
   #canvas {
-    order: 2
+    order: 2;
+    height: 50%;
+    width: auto;
   }
 
   .button-box {
@@ -79,11 +85,6 @@ body {
     position: absolute;
     top: 40%;
     order: 4;
-  }
-
-  #canvas {
-    width: 60%;
-    height: auto;
   }
 }
 
@@ -122,7 +123,6 @@ body {
   height: 100vh;
   width: auto;
   background-size: cover;
-  padding: 30px;
   margin: 0 auto;
   justify-self: center;
   display: flex;
