@@ -12,7 +12,9 @@ const upBtn = document.getElementById('up');
 const leftBtn = document.getElementById('left');
 const rightBtn = document.getElementById('right');
 const downBtn = document.getElementById('down');
-
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault()
+})
 
 // Calculate size of canvas from constants.
 ctx.canvas.width = COLS * BLOCK_SIZE;
