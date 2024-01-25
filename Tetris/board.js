@@ -21,6 +21,7 @@ export class Board {
     this._linesCleared = 0;
     this._levelTally = 0;
     this.speedMultiplier = 1;
+    this.controls = { up: false, left: false, down: false, right: false };
   }
 
 
@@ -33,7 +34,6 @@ export class Board {
       for (let x = 0; x < this.grid[y].length; x++) {
         if (this.grid[y][x] > 0) {
           switch (this.grid[y][x]) {
-
             case 1: this.ctx.fillStyle = 'yellow'
               break;
             case 2: this.ctx.fillStyle = 'lightblue'

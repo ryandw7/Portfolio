@@ -56,7 +56,7 @@ function stringTyper(string1, element1, string2, element2) {
                 array1.push('|')
                 element1.textContent = array1.join("");
             }
-        }, i * 25);
+        }, i * 20);
 
         setTimeout(() => {
             if (i < string2.length) {
@@ -65,20 +65,20 @@ function stringTyper(string1, element1, string2, element2) {
                 array2.push('|')
                 element2.textContent = array2.join("");
             }
-        }, (i + string1.length) * 25);
+        }, (i + string1.length) * 20);
 
     }
     setTimeout(() => {
         array1.pop();
         element1.textContent = array1.join("");
         console.log('1')
-    }, 25 * string1.length);
+    }, 20 * string1.length);
 
     setTimeout(() => {
         array2.pop();
         element2.textContent = array2.join("");
         console.log(array1.join(""));
-    }, 25 * (string2.length + string1.length));
+    }, 20 * (string2.length + string1.length));
 
 }
 

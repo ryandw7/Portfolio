@@ -12,6 +12,7 @@ class Piece {
         this.canRotate = true;
         this.pieceSpeed = 1;
         this.isActive = true;
+        
     }
     //Fill parent board with matrix position
     fillMatrix() {
@@ -119,18 +120,18 @@ class Piece {
             this.clearMatrix();
             this.determineBoundaries();
 
-            if (this.canMoveRight && event.code === "ArrowRight" && this.isActive) {
+            if (this.canMoveRight && (event.code === "ArrowRight" || this.parent.controls.right === true)) {
                 this.right();
             } else {
             };
-            if (this.canMoveLeft && event.code === "ArrowLeft" && this.isActive) {
+            if (this.canMoveLeft && (event.code === "ArrowLeft" || this.parent.controls.left === true)) {
                 this.left();
             } else {
             }
-            if (this.canMoveDown && event.code === "ArrowUp" && this.isActive) {
+            if (this.canMoveDown && (event.code === "ArrowUp" || this.parent.controls.up === true)) {
                 this.rotatePiece();
             };
-            if (this.canMoveDown && event.code === "ArrowDown" && this.isActive) {
+            if (this.canMoveDown && (event.code === "ArrowDown" || this.parent.controls.down === true)) {
                 this.pieceSpeed = 10;
             };
         }
@@ -186,11 +187,9 @@ class Piece {
 
     async move() {
         document.addEventListener("keydown", () => this.keyListeners());
-        document.addEventListener("keyup", () => {
-            console.log("key up")
-
-            this.pieceSpeed = 1;
-        })
+        document.addEventListener('mousedown', () => this.keyListeners());
+        document.addEventListener('mouseup', () => this.keyListeners());
+        document.addEventListener("keyup", () => {this.pieceSpeed = 1;})
         if(this.isActive){
         for (let i = 0; i < 20; i++) {
             await new Promise((resolve) => {
