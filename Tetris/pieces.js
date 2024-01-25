@@ -12,7 +12,7 @@ class Piece {
         this.canRotate = true;
         this.pieceSpeed = 1;
         this.isActive = true;
-        
+
     }
     //Fill parent board with matrix position
     fillMatrix() {
@@ -176,50 +176,53 @@ class Piece {
                     }
                 }
             }
-        
-        //DETERMINES MOVE POSSIBILITIES FOR THE WHOLE PIECE
-        this.canMoveDown = canMoveDownTally.every(Boolean);
-        this.canMoveRight = canMoveRightTally.every(Boolean);
-        this.canMoveLeft = canMoveLeftTally.every(Boolean);
-        this.fillMatrix();
+
+            //DETERMINES MOVE POSSIBILITIES FOR THE WHOLE PIECE
+            this.canMoveDown = canMoveDownTally.every(Boolean);
+            this.canMoveRight = canMoveRightTally.every(Boolean);
+            this.canMoveLeft = canMoveLeftTally.every(Boolean);
+            this.fillMatrix();
         }
     }
 
     async move() {
         document.addEventListener("keydown", () => this.keyListeners());
         document.addEventListener('mousedown', () => this.keyListeners());
-        document.addEventListener('mouseup', () => this.keyListeners());
-        document.addEventListener("keyup", () => {this.pieceSpeed = 1;})
-        if(this.isActive){
-        for (let i = 0; i < 20; i++) {
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                  if (this.isActive === true) {
-                        this.determineBoundaries();
-                        if (this.canMoveDown) {
-                            this.down();
-                        } else if (!this.canMoveDown) {
-                            setTimeout(() => {
-                                this.determineBoundaries();
-                                if (!this.canMoveDown && this.isActive) {
-                                    console.log('piece is not active')
-                                    this.isActive = false;
-                                    this.parent.pieceIsActive = false;
-                                    resolve(false)
-                                }
-                            }, 500);
-                        } else { this.down() }
+        document.addEventListener('mouseup', () => {
+            this.keyListeners();
+            this.pieceSpeed = 1
+        });
+        document.addEventListener("keyup", () => this.pieceSpeed = 1);
+        if (this.isActive) {
+            for (let i = 0; i < 20; i++) {
+                await new Promise((resolve) => {
+                    setTimeout(() => {
+                        if (this.isActive === true) {
+                            this.determineBoundaries();
+                            if (this.canMoveDown) {
+                                this.down();
+                            } else if (!this.canMoveDown) {
+                                setTimeout(() => {
+                                    this.determineBoundaries();
+                                    if (!this.canMoveDown && this.isActive) {
+                                        console.log('piece is not active')
+                                        this.isActive = false;
+                                        this.parent.pieceIsActive = false;
+                                        resolve(false)
+                                    }
+                                }, 500);
+                            } else { this.down() }
 
-                    } else {
-                       // this.parent.pieceIsActive = false;
-                        resolve(false)
-                    }
-                    resolve(true)
-                }, (500) / ((this.pieceSpeed) * (this.parent.speedMultiplier)));
-               
+                        } else {
+                            // this.parent.pieceIsActive = false;
+                            resolve(false)
+                        }
+                        resolve(true)
+                    }, (500) / ((this.pieceSpeed) * (this.parent.speedMultiplier)));
+
+                }
+                )
             }
-            )
-        }
         }
     }
 

@@ -190,7 +190,7 @@ body {
   text-align: center;
 }
 
-.start {
+#menu {
   background-color: rgba(0, 0, 0, 0.678);
   position: absolute;
   top: 0px;
@@ -202,16 +202,18 @@ body {
   color: white;
   }
   
-  .start h1 {
+  #menu h1 {
     font-size: 40px;
   }
-  .start h2 {
+  #menu h2 {
     font-size: 25px;
   }
-  .start p{
+  #menu p{
+    margin-left:15%;
     font-size: 12px;
+    text-align: left;
   }
   
-  .start i {
+  #menu i {
     font-size: 20px;
   }

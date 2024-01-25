@@ -3,8 +3,7 @@ import { COLS, ROWS, BLOCK_SIZE, gameOver } from "./constants.js";
 import { Board } from "./board.js";
 let canPressPlay = true;
 const button = document.getElementById("play-button");
-
-
+const menu = document.getElementById("menu");
 //main.js
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
@@ -26,7 +25,7 @@ ctx.fillStyle = 'blue';
 async function play(ctx) {
   if(canPressPlay){
   canPressPlay = false;
-  button.hidden = true;
+  menu.style.display = "none";
   let board = new Board(ctx);
   upBtn.addEventListener('mousedown', ()=>{
     board.controls.up = true;
