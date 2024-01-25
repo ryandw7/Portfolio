@@ -42,6 +42,8 @@ body {
     background: none;
     border: 0px;
     height: fit-content;
+    touch-action: manipulation;
+    appearance: none;
   }
 
  
