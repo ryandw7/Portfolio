@@ -31,6 +31,9 @@ COLORS
 
 
 @media only screen and (min-width: 300px) {
+    .about-me {
+        margin-top: 20px;
+    }
 
     .projects article {
         width: 270px;
@@ -163,6 +166,16 @@ COLORS
     }
 }
 
+#back {
+    left: 0px;
+    position: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    
+}
+
 html {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -172,8 +185,9 @@ html {
 
 main section {
     width: 100%;
-    height: max-content;
+    height: auto;
     padding: 40px;
+    
 }
 
 body {
@@ -196,10 +210,12 @@ h2 {
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px black;
     text-align: center;
+    text-decoration: underline;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-style: italic ;
 }
 
 h4 {
@@ -225,7 +241,7 @@ p {
 header {
     height: 100vh;
     width: 100%;
-    background-color: #5F548F;
+    background-color: #5f548fd3;
     align-items: center;
 }
 
@@ -312,7 +328,8 @@ nav a:hover {
 
 
 .projects {
-    background-color: #4C495C;
+    border-top: 3px solid #4c495c;
+    background-color: #4c495c;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -324,8 +341,7 @@ nav a:hover {
     display: block;
     width: 100%;
     justify-self: center;
-
-
+   
 }
 
 .projects article {
@@ -381,7 +397,7 @@ border-bottom: 3px solid white;
     align-items: center;
     justify-content: space-around;
     min-height: 100vh;
-    background-color: #5F548F;
+    background-color: #5f548fd3;
     margin: 0 auto;
 
 }
@@ -460,7 +476,7 @@ footer {
 
 .contact-info h2 {
     width: 50%;
-    border-bottom: 3px solid white;
+    
     margin-bottom: 60px;
 }
 
