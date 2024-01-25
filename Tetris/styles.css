@@ -38,7 +38,7 @@ body {
 
   #play-button {
     width: 100px;
-    height: 30px;
+    height: auto;
   }
 
   .stats {
@@ -47,6 +47,7 @@ body {
   }
 
   i {
+
     font-size: 60px;
     margin: 0 auto;
     appearance: none;
@@ -81,30 +82,51 @@ body {
   .button-box {
     display: flex;
     order: 3;
-    width: 50%;
-    justify-content: space-around;
+    width: 80%;
+    justify-content: space-between;
     touch-action: manipulation;
   }
 
   #left {
     order: 1;
+    color: black;
   }
 
   #right {
     order: 2;
+    color: black;
   }
 
   #up {
-    order: 3;
+    font-size: 20px;
+    
+    order: 4;
+    color: black;
+    background-color: #4caf50;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 3px solid black;
   }
 
   #down {
-    order: 4;
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    order: 3;
+    color: black;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 3px solid black;
   }
 
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   .stats {
     justify-self: flex-start;
     align-self: flex-start;
@@ -125,7 +147,7 @@ body {
 
   #play-button {
     width: 200px;
-    height: 50px;
+    height: auto;
   }
 
   .arrow-container {
@@ -199,7 +221,8 @@ body {
   margin: 30px auto;
   background-color: #4caf50;
   font-size: 2vw;
-  padding: 5px 10px;
+  padding: 20px;
+  text-align: center;
   cursor: pointer;
 }
 
