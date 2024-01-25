@@ -28,35 +28,35 @@ async function play(ctx) {
     menu.style.display = "none";
     
     let board = new Board(ctx);
-    upBtn.addEventListener('mousedown', () => {
+    upBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.up = true;}
     });
-    upBtn.addEventListener('mouseup', () => {
+    upBtn.addEventListener('touchend', () => {
       if(board.pieceIsActive === true){
       board.controls.up = false;}
     })
-    leftBtn.addEventListener('mousedown', () => {
+    leftBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.left = true;}
     });
-    leftBtn.addEventListener('mouseup', () => {
+    leftBtn.addEventListener('touchend', () => {
       if(board.pieceIsActive === true){
       board.controls.left = false;}
     })
-    downBtn.addEventListener('mousedown', () => {
+    downBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.down = true;}
     });
-    downBtn.addEventListener('mouseup', () => {
+    downBtn.addEventListener('touchend', () => {
       if(board.pieceIsActive === true){
       board.controls.down = false;}
     })
-    rightBtn.addEventListener('mousedown', () => {
+    rightBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.right = true;}
     });
-    rightBtn.addEventListener('mouseup', () => {
+    rightBtn.addEventListener('touchend', () => {
       if(board.pieceIsActive === true){
       board.controls.right = false;}
     })

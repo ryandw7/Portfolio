@@ -119,7 +119,7 @@ class Piece {
         if (this.isActive) {
             this.clearMatrix();
             this.determineBoundaries();
-
+            console.log('checking events')
             if (this.canMoveRight && (event.code === "ArrowRight" || this.parent.controls.right === true)) {
                 this.right();
             } else {
@@ -134,10 +134,10 @@ class Piece {
             if (this.canMoveDown && (event.code === "ArrowDown" || this.parent.controls.down === true)) {
                 this.pieceSpeed = 10;
             };
-            if (event === "mouseup"){
+            if (event === "touchend"){
                 this.pieceSpeed = 1;
             }
-            console.log(event)
+          
         }
     }
 
@@ -150,6 +150,7 @@ class Piece {
             //Loop through each matrix segment and compare with parent grid
             this.clearMatrix();
             for (let y = 0; y < this.matrix.length; y++) {
+                
                 for (let x = 0; x < this.matrix[y].length; x++) {
                     if (this.matrix[y][x] > 0) {
                         if (this.positionY + 1 + y < this.parent.grid.length) {
@@ -190,8 +191,8 @@ class Piece {
 
     async move() {
         document.addEventListener("keydown", () => this.keyListeners());
-        document.addEventListener('mousedown', () => this.keyListeners());
-        document.addEventListener('mouseup', () => {
+        document.addEventListener('touchstart', () => this.keyListeners());
+        document.addEventListener('touchend', () => {
             this.keyListeners();
             this.pieceSpeed = 1;
         });

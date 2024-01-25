@@ -24,6 +24,22 @@ body {
 
 @media only screen and (min-width: 300px) {
 
+  .stats h1 {
+    font-size: 3vw;
+  }
+  
+  .stats p {
+    font-size: 2vw;
+  }
+  
+  #menu p {
+    margin-left: 15%;
+  }
+
+  #play-button {
+    width: 100px;
+    height: 30px;
+  }
 
   .stats {
     order: 1;
@@ -89,6 +105,29 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .stats {
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+  .stats h1 {
+    font-size: 2vw;
+  }
+  
+  .stats p {
+    font-size: 1vw;
+  }
+  
+  #menu p {
+    margin-left: 40%;
+    margin-top: 40px;
+
+  }
+
+  #play-button {
+    width: 200px;
+    height: 50px;
+  }
+
   .arrow-container {
     display: block;
   }
@@ -109,6 +148,10 @@ body {
     height: auto;
     width: 20%;
     justify-content: space-around;
+  }
+
+  .button-box {
+    display: none;
   }
 }
 
@@ -141,14 +184,6 @@ body {
   font-size: 10vw;
 }
 
-.stats h1 {
-  font-size: 3vw;
-}
-
-.stats p {
-  font-size: 2vw;
-}
-
 .right-column {
   justify-content: center;
   align-content: center;
@@ -166,8 +201,6 @@ body {
   font-size: 2vw;
   padding: 5px 10px;
   cursor: pointer;
-  width: 100px;
-  height: 30px;
 }
 
 #canvas {
@@ -211,7 +244,6 @@ body {
 }
 
 #menu p {
-  margin-left: 15%;
   font-size: 12px;
   text-align: left;
 }
