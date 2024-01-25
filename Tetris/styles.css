@@ -12,8 +12,7 @@
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
+  touch-action: manipulation;
 }
 
 html,
@@ -24,16 +23,17 @@ body {
 }
 
 @media only screen and (min-width: 300px) {
+
+
   .stats {
     order: 1;
     width: 80%;
   }
 
   i {
-    height: 36px;
-    width: 36px;
-    font-size: 5vh;
+    font-size: 60px;
     margin: 0 auto;
+    appearance: none;
   }
 
   button {
@@ -42,7 +42,6 @@ body {
     background: none;
     border: 0px;
     height: fit-content;
-    touch-action: manipulation;
     appearance: none;
   }
 
@@ -84,11 +83,7 @@ body {
   #down {
     order: 4;
   }
-  #play-button {
-    position: absolute;
-    top: 40%;
-    order: 4;
-  }
+ 
 }
 
 @media only screen and (min-width: 1000px) {
@@ -165,11 +160,13 @@ body {
 }
 
 #play-button {
-  margin: 0;
+  margin: 30px auto;
   background-color: #4caf50;
   font-size: 2vw;
   padding: 5px 10px;
   cursor: pointer;
+  width: 100px;
+  height: 30px;
 }
 
 
@@ -192,3 +189,29 @@ body {
   background-color: black;
   text-align: center;
 }
+
+.start {
+  background-color: rgba(0, 0, 0, 0.678);
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 80px;
+  text-align: center;
+  color: white;
+  }
+  
+  .start h1 {
+    font-size: 40px;
+  }
+  .start h2 {
+    font-size: 25px;
+  }
+  .start p{
+    font-size: 12px;
+  }
+  
+  .start i {
+    font-size: 20px;
+  }
