@@ -28,39 +28,25 @@ async function play(ctx) {
     menu.style.display = "none";
     
     let board = new Board(ctx);
+    document.addEventListener('touchend', () => {
+      board.toggleControls();
+    })
     upBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.up = true;}
     });
-    upBtn.addEventListener('touchend', () => {
-      if(board.pieceIsActive === true){
-      board.controls.up = false;}
-    })
     leftBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.left = true;}
     });
-    leftBtn.addEventListener('touchend', () => {
-      if(board.pieceIsActive === true){
-      board.controls.left = false;}
-    })
     downBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.down = true;}
     });
-    downBtn.addEventListener('touchend', () => {
-      if(board.pieceIsActive === true){
-      board.controls.down = false;}
-    })
     rightBtn.addEventListener('touchstart', () => {
       if(board.pieceIsActive === true){
       board.controls.right = true;}
     });
-    rightBtn.addEventListener('touchend', () => {
-      if(board.pieceIsActive === true){
-      board.controls.right = false;}
-    })
-  
     board.checkBoard();
   }
 }

@@ -31,6 +31,10 @@ COLORS
 
 
 @media only screen and (min-width: 300px) {
+    .nav a {
+        font-size: 2vw;
+    }
+
     .about-me {
         margin-top: 20px;
     }
@@ -78,7 +82,7 @@ COLORS
 
 @media only screen and (min-width: 500px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -98,7 +102,9 @@ COLORS
 
 @media only screen and (min-width: 800px) {
 
-
+    .nav a {
+        font-size: 1.5vw;
+    }
 
 
     .projects article {
@@ -290,6 +296,7 @@ header {
 }
 
 .nav {
+    
     display: flex;
     top: 0px;
     padding: 10px 0px;
@@ -316,7 +323,7 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    
 }
 
 nav a:hover {

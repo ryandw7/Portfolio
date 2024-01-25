@@ -24,7 +24,12 @@ export class Board {
     this.controls = { up: false, left: false, down: false, right: false };
   }
 
-
+  toggleControls() {
+    this.controls.up = false;
+    this.controls.left = false;
+    this.controls.right = false;
+    this.controls.down = false;
+  }
   //Updates the visuals to represent changes made to the grid, use after every piece move
   correctChanges() {
     document.getElementById("score").textContent = this._score;
