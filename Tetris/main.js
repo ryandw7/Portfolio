@@ -23,43 +23,45 @@ gameOver.hidden = true;
 ctx.scale(BLOCK_SIZE, BLOCK_SIZE);
 ctx.fillStyle = 'blue';
 async function play(ctx) {
-  if(canPressPlay){
-  canPressPlay = false;
-  menu.style.display = "none";
-  let board = new Board(ctx);
-  upBtn.addEventListener('mousedown', ()=>{
-    board.controls.up = true;
-    console.log('true')
-  });
-  upBtn.addEventListener('mouseup', ()=>{
-    board.controls.up = false;
-    console.log('false')
-  })
-  leftBtn.addEventListener('mousedown', ()=>{
-    board.controls.left = true;
-    console.log('true')
-  });
- leftBtn.addEventListener('mouseup', ()=>{
-    board.controls.left = false;
-    console.log('false')
-  })
-  downBtn.addEventListener('mousedown', ()=>{
-    board.controls.down = true;
-    console.log('true')
-  });
-  downBtn.addEventListener('mouseup', ()=>{
-    board.controls.down = false;
-    console.log('false')
-  })
-  rightBtn.addEventListener('mousedown', ()=>{
-    board.controls.right = true;
-    console.log('true')
-  });
-  rightBtn.addEventListener('mouseup', ()=>{
-    board.controls.right = false;
-    console.log('false')
-  })
-  board.checkBoard();
+  if (canPressPlay) {
+    canPressPlay = false;
+    menu.style.display = "none";
+    
+    let board = new Board(ctx);
+    upBtn.addEventListener('mousedown', () => {
+      if(board.pieceIsActive === true){
+      board.controls.up = true;}
+    });
+    upBtn.addEventListener('mouseup', () => {
+      if(board.pieceIsActive === true){
+      board.controls.up = false;}
+    })
+    leftBtn.addEventListener('mousedown', () => {
+      if(board.pieceIsActive === true){
+      board.controls.left = true;}
+    });
+    leftBtn.addEventListener('mouseup', () => {
+      if(board.pieceIsActive === true){
+      board.controls.left = false;}
+    })
+    downBtn.addEventListener('mousedown', () => {
+      if(board.pieceIsActive === true){
+      board.controls.down = true;}
+    });
+    downBtn.addEventListener('mouseup', () => {
+      if(board.pieceIsActive === true){
+      board.controls.down = false;}
+    })
+    rightBtn.addEventListener('mousedown', () => {
+      if(board.pieceIsActive === true){
+      board.controls.right = true;}
+    });
+    rightBtn.addEventListener('mouseup', () => {
+      if(board.pieceIsActive === true){
+      board.controls.right = false;}
+    })
+  
+    board.checkBoard();
   }
 }
 
@@ -67,7 +69,7 @@ async function play(ctx) {
 
 button.onclick = () => {
   play(ctx);
-   console.log('play')
+  console.log('play')
 }
 
 // ctx.fillRect(6, 0, 1, 1);

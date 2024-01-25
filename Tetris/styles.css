@@ -45,7 +45,7 @@ body {
     appearance: none;
   }
 
- 
+
   .grid {
     position: relative;
     top: 40px;
@@ -69,6 +69,7 @@ body {
     justify-content: space-around;
     touch-action: manipulation;
   }
+
   #left {
     order: 1;
   }
@@ -80,10 +81,11 @@ body {
   #up {
     order: 3;
   }
+
   #down {
     order: 4;
   }
- 
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -128,7 +130,8 @@ body {
 }
 
 .stats {
-
+  width: 300px;
+  text-wrap: nowrap;
   text-align: center;
   background-color: aliceblue;
   padding: 10px;
@@ -152,8 +155,6 @@ body {
   display: flex;
 }
 
-
-
 .game-board {
   border: solid 2px;
 
@@ -169,7 +170,6 @@ body {
   height: 30px;
 }
 
-
 #canvas {
   margin: 20px;
   border: 2px solid black;
@@ -183,7 +183,7 @@ body {
   margin: 0 auto;
   color: white;
   position: fixed;
-  width: 303px;
+  width: 100vw;
   padding: 50px 0px;
   z-index: 1;
   background-color: black;
@@ -200,20 +200,22 @@ body {
   padding: 80px;
   text-align: center;
   color: white;
-  }
-  
-  #menu h1 {
-    font-size: 40px;
-  }
-  #menu h2 {
-    font-size: 25px;
-  }
-  #menu p{
-    margin-left:15%;
-    font-size: 12px;
-    text-align: left;
-  }
-  
-  #menu i {
-    font-size: 20px;
-  }
+}
+
+#menu h1 {
+  font-size: 40px;
+}
+
+#menu h2 {
+  font-size: 25px;
+}
+
+#menu p {
+  margin-left: 15%;
+  font-size: 12px;
+  text-align: left;
+}
+
+#menu i {
+  font-size: 20px;
+}

@@ -134,6 +134,10 @@ class Piece {
             if (this.canMoveDown && (event.code === "ArrowDown" || this.parent.controls.down === true)) {
                 this.pieceSpeed = 10;
             };
+            if (event === "mouseup"){
+                this.pieceSpeed = 1;
+            }
+            console.log(event)
         }
     }
 
@@ -153,8 +157,7 @@ class Piece {
 
                                 canMoveDownTally.push(true);
                             } else {
-                                canMoveDownTally.push(false)
-
+                                canMoveDownTally.push(false);
                             }
                         } else {
                             canMoveDownTally.push(false);
@@ -190,7 +193,7 @@ class Piece {
         document.addEventListener('mousedown', () => this.keyListeners());
         document.addEventListener('mouseup', () => {
             this.keyListeners();
-            this.pieceSpeed = 1
+            this.pieceSpeed = 1;
         });
         document.addEventListener("keyup", () => this.pieceSpeed = 1);
         if (this.isActive) {
