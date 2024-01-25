@@ -14,28 +14,24 @@
   <div class="grid">
     <div id="game-over">Game Over</div>
     <canvas id="canvas" class="game-board">
-
     </canvas>
-
-    <div class="right-column">
-      <div>
-        <div class="stats">
-          <h1>TETRIS</h1>
-          <p>Score: <span id="score">0</span></p>
-          <p>Lines: <span id="lines">0</span></p>
-          <p>Level: <span id="level">0</span></p>
-        </div>
+    <div>
+      <div class="stats">
+        <h1>TETRIS</h1>
+        <p>Score: <span id="score">0</span></p>
+        <p>Lines: <span id="lines">0</span></p>
+        <p>Level: <span id="level">0</span></p>
       </div>
-      <div class="button-box">
-        <button id="up"><i class='far fa-caret-square-up'></i></button>
-        <button id="left"><i class='far fa-caret-square-left'></i></button>
-        <button id="down"><i class='far fa-caret-square-down'></i></button>
-        <button id="right"><i class='far fa-caret-square-right'></i></button>
-        
-      </div>
-      <button id="play-button">Play</button>
     </div>
+    <div class="button-box">
+      <button id="up"><i class='far fa-caret-square-up'></i></button>
+      <button id="left"><i class='far fa-caret-square-left'></i></button>
+      <button id="down"><i class='far fa-caret-square-down'></i></button>
+      <button id="right"><i class='far fa-caret-square-right'></i></button>
+    </div>
+    <button id="play-button">Play</button>
   </div>
+
   <script type="module" src="constants.js"></script>
   <script type="module" src="board.js"></script>
   <script type="module" src="piece.js"></script>

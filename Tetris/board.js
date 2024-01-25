@@ -119,6 +119,7 @@ export class Board {
             this.currentPiece.move();
           } else {
             gameOver.hidden = false;
+            button.hidden = false;
             return this._score;
           }
 

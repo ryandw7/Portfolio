@@ -24,6 +24,7 @@ ctx.fillStyle = 'blue';
 async function play(ctx) {
   if(canPressPlay){
   canPressPlay = false;
+  button.hidden = true;
   let board = new Board(ctx);
   upBtn.addEventListener('mousedown', ()=>{
     board.controls.up = true;
