@@ -155,7 +155,7 @@ body {
   }
 
   .grid {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -173,7 +173,7 @@ body {
   }
 
   .button-box {
-    display: none;
+   
   }
 }
 
