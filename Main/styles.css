@@ -36,7 +36,7 @@ COLORS
     }
 
     .about-me {
-        margin-top: 20px;
+        top: 75px
     }
 
     .projects article {
@@ -63,10 +63,10 @@ COLORS
 
     .title {
         display: block;
+        
     }
 
     .about-me {
-        top: 40px;
         width: 80%;
 
     }
