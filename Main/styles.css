@@ -489,8 +489,9 @@ footer {
 }
 
 #tetris {
-    background-image: url("tetrisIMG.png");
+    background-image: url("TetrisIMG.png");
     background-size: cover;
+    background-position: center;
 }
 
 #film-finder {
