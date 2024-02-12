@@ -19,7 +19,7 @@ padding: 40px;
 #genreForm select{
     text-align: center;
     font-size: 2vw;
-    width: 400px;
+    width: 200px;
 }
 
 #genreForm, #playBtn {
