@@ -185,7 +185,7 @@ COLORS
 
 html {
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: white;
     font-weight: bold;
 }
@@ -263,9 +263,6 @@ header {
     text-shadow: 1px 1px 2px black;
 }
 
-#title1, #title2 {
-    opacity: 0;
-}
 .title {
     max-width: 80%;
     padding-top: 20px;

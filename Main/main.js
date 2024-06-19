@@ -11,12 +11,10 @@ function eventListeners() {
     for (let i = 0; i < projectArticles.length; i++) {
         projectArticles[i].addEventListener("mouseover", function () {
             projectArticleText[i].style.visibility = 'visible';
-            console.log('bruh');
         }
         )
         projectArticles[i].addEventListener("mouseout", function () {
             projectArticleText[i].style.visibility = 'hidden';
-            console.log('bruh');
         }
         )
     }
@@ -84,9 +82,6 @@ function stringTyper(string1, element1, string2, element2) {
 
 
 window.addEventListener("load", () => {
-    fadeIn(title1);
-    fadeIn(title2)
-    console.log('test')
     stringTyper(aboutMeP1String, aboutMeP1, aboutMeP2String, aboutMeP2);
 })
 
